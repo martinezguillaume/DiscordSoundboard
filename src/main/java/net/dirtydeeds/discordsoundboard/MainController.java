@@ -18,5 +18,7 @@ public class MainController {
 
     public static void main(String[] args) {
         SpringApplication.run(MainController.class, args);
+
+        DynoWaker.start("https://soundboard-zer.herokuapp.com/", 25);
     }
 }
