@@ -375,7 +375,7 @@ public class SoundPlayerImpl implements Observer {
 
     public boolean isUserAllowed(String username) {
         // FIXME: WHY allowedUsers.isEmpty() returns false ?
-        return true
+        return true;
         if (allowedUsers == null) {
             return true;
         } else if (allowedUsers.isEmpty()) {
