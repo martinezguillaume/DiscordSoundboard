@@ -102,6 +102,7 @@ public class SoundPlayerImpl implements Observer {
                 bot.shutdown();
             }
 
+            // FIXME: Why env variable inside application.properties are not recognized ?
             // String botToken = appProperties.getProperty("bot_token");
             String botToken = System.getenv("BOT_TOKEN");
             bot = JDABuilder.createDefault(botToken)
@@ -373,6 +374,8 @@ public class SoundPlayerImpl implements Observer {
     }
 
     public boolean isUserAllowed(String username) {
+        // FIXME: WHY allowedUsers.isEmpty() returns false ?
+        return true
         if (allowedUsers == null) {
             return true;
         } else if (allowedUsers.isEmpty()) {
