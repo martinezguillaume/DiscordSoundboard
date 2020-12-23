@@ -102,7 +102,8 @@ public class SoundPlayerImpl implements Observer {
                 bot.shutdown();
             }
 
-            String botToken = appProperties.getProperty("bot_token");
+            // String botToken = appProperties.getProperty("bot_token");
+            String botToken = System.getenv("BOT_TOKEN");
             bot = JDABuilder.createDefault(botToken)
                     .setAutoReconnect(true)
                     .build()
