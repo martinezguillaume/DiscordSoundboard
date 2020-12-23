@@ -376,11 +376,11 @@ public class SoundPlayerImpl implements Observer {
     public boolean isUserAllowed(String username) {
         // FIXME: WHY allowedUsers.isEmpty() returns false ?
         return true;
-        if (allowedUsers == null) {
-            return true;
-        } else if (allowedUsers.isEmpty()) {
-            return true;
-        } else return allowedUsers.contains(username);
+        // if (allowedUsers == null) {
+        //     return true;
+        // } else if (allowedUsers.isEmpty()) {
+        //     return true;
+        // } else return allowedUsers.contains(username);
     }
 
     public boolean isUserBanned(String username) {
